@@ -1,11 +1,13 @@
 ﻿using System.Text;
 
-char tempChar = '\0';
-int keyCount = 0;
+// declare global variables
+char tempChar = '\0';                               // temporary character for placeholder of key to text binding 
+int keyCount = 0;                                   // loop counter for processing key press
 
+// declare dictionary object for keypad 
 Dictionary<char, string> keypad = new Dictionary<char, string>
 {
-    { '1', "" },        // special charaters of keypad phone
+    { '1', "&'(" },
     { '2', "ABC" },
     { '3', "DEF" },
     { '4', "GHI" },
@@ -14,10 +16,10 @@ Dictionary<char, string> keypad = new Dictionary<char, string>
     { '7', "PQRS" },
     { '8', "TUV" },
     { '9', "WXYZ" },
-    { '0', " " }        // space character
+    { '0', " " }                                    // define space character when press '0'
 };
 
-void resetKeyAndCounter()
+void resetKeyAndCounter()                           // reset key and counter 
 {
     tempChar = '\0';
     keyCount = 0;
